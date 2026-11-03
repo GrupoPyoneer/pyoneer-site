@@ -53,6 +53,15 @@ h2{font-size:clamp(26px,4vw,38px);font-weight:800;margin-bottom:12px}
 .svc{padding:26px 24px 26px 0;border-bottom:1px solid var(--line)}
 .svc h3{font-size:19px;margin-bottom:8px}.svc p{margin:0 0 10px;color:var(--muted);font-size:15px}
 .svc ul{margin:0;padding-left:18px;font-size:14px;color:var(--text)}
+.feat{display:grid;grid-template-columns:1.15fr 1fr;gap:36px;align-items:center;background:var(--blue);color:#fff;border-radius:12px;padding:40px 40px;margin:34px 0 0}
+.feat .kick{font:700 12px var(--h);letter-spacing:.14em;text-transform:uppercase;color:#ffb3ad;margin-bottom:10px}
+.feat h3{font:800 clamp(26px,4vw,36px)/1.1 var(--h);margin:0 0 10px;color:#fff}.feat .sub{font:600 17px/1.4 var(--h);margin:0 0 14px;color:#fff}
+.feat p{margin:0 0 18px;color:#dbe4f8;font-size:15.5px;line-height:1.6}
+.feat ul{margin:0 0 20px;padding:0;list-style:none;font-size:15px}.feat li{padding:9px 0 9px 26px;position:relative;border-bottom:1px solid rgba(255,255,255,.18)}.feat li:last-child{border-bottom:0}.feat li::before{content:"";position:absolute;left:2px;top:15px;width:9px;height:9px;border-radius:50%;background:var(--red)}
+.feat small{display:block;margin-top:14px;color:#b9c7ea;font-size:12.5px}
+@media(max-width:820px){.feat{grid-template-columns:1fr;gap:20px;padding:28px 22px}}
+.hl{display:flex;align-items:center;gap:16px;flex-wrap:wrap;border:1px solid var(--line);border-left:5px solid var(--red);border-radius:8px;padding:18px 22px;margin:0 0 8px;text-decoration:none;color:var(--ink);background:#fff}
+.hl b{font:700 12px var(--h);letter-spacing:.12em;text-transform:uppercase;color:var(--red)}.hl strong{font:700 17px var(--h)}.hl span{flex:1 1 280px;color:var(--muted);font-size:15px}.hl i{font:700 14px var(--h);font-style:normal;color:var(--blue)}.hl:hover{border-color:var(--blue)}
 .maq{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
 .maq .big{font:800 clamp(88px,16vw,160px)/.9 var(--h);color:var(--red);letter-spacing:-.04em}
 .maq .big small{display:block;font:600 16px var(--b);color:var(--muted);letter-spacing:0;margin-top:10px}
@@ -141,6 +150,8 @@ dialog::backdrop{background:rgba(10,10,10,.6)}
 <div class="areas"><span>Legalização</span><span>Marketing</span><span>Tecnologia</span><span>Relocation</span></div>
 </div>
 
+<div class="wrap"><a class="hl" href="#juridica"><b>Em destaque</b><div style="flex:1 1 300px"><strong>Assessoria Jurídica</strong><br><span>Soluções jurídicas, contábeis e estratégicas para o seu negócio crescer no Paraguai</span></div><i>Conhecer →</i></a></div>
+
 <section class="soft"><div class="wrap">
 <h2>Como trabalhamos</h2>
 <p class="lead">Atendemos empresas e profissionais do Brasil e de outros países, do planejamento ao dia a dia.</p>
@@ -165,6 +176,7 @@ dialog::backdrop{background:rgba(10,10,10,.6)}
 <div class="svc"><h3>Concierge e relocation</h3><p>Sua mudança e a da sua família, com quem conhece o Paraguai.</p><ul><li>Viagem de prospecção e Landing Pack</li><li>Imóvel, escola, saúde e CNH</li></ul></div>
 </div>
 <p class="note">Taxas governamentais, escribano, tradução e apostilamento são cobrados à parte.</p>
+<div class="feat" id="juridica"><div><div class="kick">Em destaque</div><h3>Assessoria Jurídica</h3><p class="sub">Soluções jurídicas, contábeis e estratégicas para o seu negócio crescer no Paraguai</p><p>Oferecemos assessoria jurídica, migratória e em direito corporativo, acompanhando pessoas, empresas e investidores. Desenvolvemos soluções sólidas, baseadas no conhecimento profundo de cada negócio e do contexto em que ele atua.</p><button type="button" class="btn js-book">Agendar consultoria gratuita</button></div><div><ul><li>Direito corporativo e societário</li><li>Assessoria jurídica migratória</li><li>Acompanhamento de pessoas, empresas e investidores</li><li>Soluções sob medida para cada negócio</li></ul><small>Serviços jurídicos executados por profissionais habilitados no Paraguai.</small></div></div>
 </div></section>
 
 <section id="maquila" class="soft"><div class="wrap maq">
@@ -320,6 +332,16 @@ dialog::backdrop{background:rgba(10,10,10,.6)}
 <script>
 (function(){
 var D=[
+['Em destaque','Destacado','Featured'],
+['Assessoria Jurídica','Asesoría Jurídica','Legal Advisory'],
+['Soluções jurídicas, contábeis e estratégicas para o seu negócio crescer no Paraguai','Soluciones jurídicas, contables y estratégicas para que su negocio crezca en Paraguay','Legal, accounting and strategic solutions to help your business grow in Paraguay'],
+['Conhecer →','Conocer →','Learn more →'],
+['Oferecemos assessoria jurídica, migratória e em direito corporativo, acompanhando pessoas, empresas e investidores. Desenvolvemos soluções sólidas, baseadas no conhecimento profundo de cada negócio e do contexto em que ele atua.','Ofrecemos asesoría jurídica, migratoria y en derecho corporativo, acompañando a personas, empresas e inversionistas. Desarrollamos soluciones sólidas, basadas en el conocimiento profundo de cada negocio y del contexto en que opera.','We provide legal, immigration and corporate law advisory, supporting individuals, companies and investors. We build solid solutions based on a deep understanding of each business and the context it operates in.'],
+['Direito corporativo e societário','Derecho corporativo y societario','Corporate and company law'],
+['Assessoria jurídica migratória','Asesoría jurídica migratoria','Immigration legal advisory'],
+['Acompanhamento de pessoas, empresas e investidores','Acompañamiento a personas, empresas e inversionistas','Support for individuals, companies and investors'],
+['Soluções sob medida para cada negócio','Soluciones a medida para cada negocio','Tailored solutions for each business'],
+['Serviços jurídicos executados por profissionais habilitados no Paraguai.','Servicios jurídicos ejecutados por profesionales habilitados en Paraguay.','Legal services carried out by licensed professionals in Paraguay.'],
 ['Serviços','Servicios','Services'],
 ['Lei de Maquila','Ley de Maquila','Maquila Law'],
 ['Pacotes','Paquetes','Packages'],
